@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="Edit pom.xml, add checkstyle and pmd ruleset">
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Mark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Move.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Position.java" afterDir="false" />
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="Implement model classes">
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/GameStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -91,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764183210216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement model classes">
+      <option name="closed" value="true" />
+      <created>1764194623968</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764194623968</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -107,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Edit pom.xml, add checkstyle and pmd ruleset" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit pom.xml, add checkstyle and pmd ruleset" />
+    <MESSAGE value="Implement model classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement model classes" />
   </component>
 </project>
