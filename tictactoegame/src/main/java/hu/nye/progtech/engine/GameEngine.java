@@ -9,6 +9,7 @@ import hu.nye.progtech.model.Board;
 import hu.nye.progtech.model.Game;
 import hu.nye.progtech.model.GameStatus;
 import hu.nye.progtech.model.Mark;
+import hu.nye.progtech.model.Move;
 import hu.nye.progtech.model.Player;
 import hu.nye.progtech.model.Position;
 import hu.nye.progtech.util.PositionFormatter;
@@ -85,7 +86,25 @@ public class GameEngine {
             } else {
                 executeComputerMove();
             }
+
+            consoleDisplay.displayBoard(game.getBoard());
+
+            GameStatus status = gameService.checkWinCondition(game);
+            game.setStatus(status);
+
+            if (status == GameStatus.PLAYER_WON) {
+                consoleDisplay.displayWinner(game.getPlayer().getName());
+                break;
+            } else if (status == GameStatus.COMPUTER_WON) {
+                consoleDisplay.displayWinner(game.getComputer().getName());
+                break;
+            } else if (status == GameStatus.DRAW) {
+                consoleDisplay.displayDraw();
+                break;
+            }
         }
+
+        moveService.switchPlayer(game);
     }
 
     private void executePlayerMove() {
@@ -93,7 +112,8 @@ public class GameEngine {
             Position position = consoleUI.getPlayerMove();
 
             if (gameService.isValidMove(position, game)) {
-                moveService.applyMove(game, position, Mark.X);
+                Move move = new Move(position, Mark.X);
+                moveService.applyMove(game, move);
                 break;
             } else {
                 consoleDisplay.displayMessage("Invalid move! Try again.");
@@ -108,7 +128,8 @@ public class GameEngine {
         Position position = randomStep.generateMove(game.getBoard());
 
         if (position != null) {
-            moveService.applyMove(game, position, Mark.O);
+            Move move = new Move(position, Mark.O);
+            moveService.applyMove(game, move);
             consoleDisplay.displayMessage("Computer moved: " + PositionFormatter.format(position));
         }
     }

@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Implement ConsoleDisplay to draw the board to the console&#10;- Implement ConsoleUI for user interactions&#10;- Implement GameEngine for application processes&#10;- Outsource PositionFormatter to utils package&#10;- Small modification on Board model">
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" afterDir="false" />
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Fixing errors for successful execution of checkstyle and pmd ruleset&#10;- Implement Application.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/RandomStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/RandomStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/MoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/MoveService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Move.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/BoardUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/BoardUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionFormatter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +66,7 @@
     "Maven.tictactoegame [clean:install].executor": "Run",
     "Maven.tictactoegame [clean].executor": "Run",
     "Maven.tictactoegame [install].executor": "Run",
+    "Maven.tictactoegame [validate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -178,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764623206552</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- Fixing errors for successful execution of checkstyle and pmd ruleset&#10;- Implement Application.java">
+      <option name="closed" value="true" />
+      <created>1764625542984</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764625542984</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +196,7 @@
     <MESSAGE value="Implement missing model classes" />
     <MESSAGE value="- Implement the business logic services&#10;- Small modification of the Game model&#10;- Implement the util package to avoid code duplication" />
     <MESSAGE value="- Implement ConsoleDisplay to draw the board to the console&#10;- Implement ConsoleUI for user interactions&#10;- Implement GameEngine for application processes&#10;- Outsource PositionFormatter to utils package&#10;- Small modification on Board model" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Implement ConsoleDisplay to draw the board to the console&#10;- Implement ConsoleUI for user interactions&#10;- Implement GameEngine for application processes&#10;- Outsource PositionFormatter to utils package&#10;- Small modification on Board model" />
+    <MESSAGE value="- Fixing errors for successful execution of checkstyle and pmd ruleset&#10;- Implement Application.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fixing errors for successful execution of checkstyle and pmd ruleset&#10;- Implement Application.java" />
   </component>
 </project>
