@@ -7,6 +7,7 @@ public class Game {
     private final Board board;
     private Player currentPlayer;
     private GameStatus status;
+    private Position lastMove;
 
     public Game(Player player, Player computer, Board board) {
         this.player = player;
@@ -14,6 +15,7 @@ public class Game {
         this.board = board;
         this.currentPlayer = player;
         this.status = GameStatus.IN_PROGRESS;
+        this.lastMove = null;
     }
 
     public Player getPlayer() {
@@ -36,6 +38,10 @@ public class Game {
         return status;
     }
 
+    public Position getLastMove() {
+        return lastMove;
+    }
+
     public void setStatus(GameStatus status) {
         this.status = status;
     }
@@ -44,8 +50,12 @@ public class Game {
         currentPlayer = currentPlayer == player ? computer : player;
     }
 
+    public void setLastMove(Position lastMove) {
+        this.lastMove = lastMove;
+    }
+
     @Override
     public String toString() {
-        return "Game{" + "player=" + player + ", computer=" + computer + ", status=" + status + "}";
+        return "Game{" + "player=" + player + ", computer=" + computer + ", status=" + status + ", lastMove=" + lastMove + "}";
     }
 }
