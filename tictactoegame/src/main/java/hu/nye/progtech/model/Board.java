@@ -6,7 +6,7 @@ public class Board {
     private final int cols;
     private final Mark[][] grid;
 
-    public Board(int rows, int cols, Mark[][] grid) {
+    public Board(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
         this.grid = new Mark[rows][cols];

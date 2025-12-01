@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="Implement missing model classes">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/GameService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/MoveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/RandomStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/BoardUtil.java" afterDir="false" />
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Board.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +77,11 @@
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Home/IdeaProjects/TicTacToe/tictactoegame/src/main/java/hu/nye/progtech/Main.java&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Home\IdeaProjects\TicTacToe" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="TicTacToe" />
@@ -123,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764196864590</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Implement the business logic services&#10;- Small modification of the Game model&#10;- Implement the util package to avoid code duplication">
+      <option name="closed" value="true" />
+      <created>1764610835715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764610835715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +153,7 @@
     <MESSAGE value="Edit pom.xml, add checkstyle and pmd ruleset" />
     <MESSAGE value="Implement model classes" />
     <MESSAGE value="Implement missing model classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement missing model classes" />
+    <MESSAGE value="- Implement the business logic services&#10;- Small modification of the Game model&#10;- Implement the util package to avoid code duplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implement the business logic services&#10;- Small modification of the Game model&#10;- Implement the util package to avoid code duplication" />
   </component>
 </project>
