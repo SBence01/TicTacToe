@@ -21,7 +21,7 @@ public class ConsoleDisplay {
     private void printColumnHeaders(int cols) {
         System.out.print(" ");
         for (int i = 0; i < cols; i++) {
-            System.out.print(" " + (char)('a' + i) + " ");
+            System.out.print(" " + (char) ('a' + i) + " ");
         }
         System.out.println();
     }
@@ -39,7 +39,7 @@ public class ConsoleDisplay {
 
         System.out.printf("%2d|", rowIndex + 1);
 
-        for (int i = 0; i <board.getCols(); i++) {
+        for (int i = 0; i < board.getCols(); i++) {
             Mark mark = board.getMark(new Position(rowIndex, i));
             System.out.print(" " + mark.getSymbol() + " ");
         }

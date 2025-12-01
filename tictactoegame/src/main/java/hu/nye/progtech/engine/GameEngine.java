@@ -5,7 +5,12 @@ import hu.nye.progtech.businesslogic.MoveService;
 import hu.nye.progtech.businesslogic.RandomStep;
 import hu.nye.progtech.command.ConsoleUI;
 import hu.nye.progtech.display.ConsoleDisplay;
-import hu.nye.progtech.model.*;
+import hu.nye.progtech.model.Board;
+import hu.nye.progtech.model.Game;
+import hu.nye.progtech.model.GameStatus;
+import hu.nye.progtech.model.Mark;
+import hu.nye.progtech.model.Player;
+import hu.nye.progtech.model.Position;
 import hu.nye.progtech.util.PositionFormatter;
 
 public class GameEngine {
@@ -18,7 +23,12 @@ public class GameEngine {
 
     private Game game;
 
-    public GameEngine(GameService gameService, MoveService moveService, RandomStep randomStep, ConsoleUI consoleUI, ConsoleDisplay consoleDisplay) {
+    public GameEngine(
+            GameService gameService,
+            MoveService moveService,
+            RandomStep randomStep,
+            ConsoleUI consoleUI,
+            ConsoleDisplay consoleDisplay) {
         this.gameService = gameService;
         this.moveService = moveService;
         this.randomStep = randomStep;
@@ -40,6 +50,8 @@ public class GameEngine {
             case 3:
                 exit();
                 break;
+            default:
+                break;
         }
     }
 
@@ -56,7 +68,7 @@ public class GameEngine {
         game = new Game(player, computer, board);
 
         gameService.placeFirstMove(board, Mark.X);
-        game.setLastMove(new Position(rows / 2, cols /2));
+        game.setLastMove(new Position(rows / 2, cols / 2));
 
         consoleDisplay.displayBoard(board);
 

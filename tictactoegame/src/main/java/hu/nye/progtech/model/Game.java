@@ -47,7 +47,11 @@ public class Game {
     }
 
     public void switchCurrentPlayer() {
-        currentPlayer = currentPlayer == player ? computer : player;
+        if (currentPlayer.equals(player)) {
+            currentPlayer = computer;
+        } else {
+            currentPlayer = player;
+        }
     }
 
     public void setLastMove(Position lastMove) {

@@ -18,7 +18,7 @@ public class BoardUtil {
                 {1, -1}, {1, 0}, {1, 1}
         };
 
-        for (int[] dir: directions) {
+        for (int[] dir : directions) {
             int newRow = position.getRow() + dir[0];
             int newCol = position.getCol() + dir[1];
 

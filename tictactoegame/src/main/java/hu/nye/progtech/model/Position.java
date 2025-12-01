@@ -22,8 +22,12 @@ public final class Position {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Position otherPos)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Position otherPos)) {
+            return false;
+        }
         return row == otherPos.row && col == otherPos.col;
     }
 

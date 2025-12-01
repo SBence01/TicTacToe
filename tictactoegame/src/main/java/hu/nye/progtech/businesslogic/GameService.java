@@ -1,6 +1,10 @@
 package hu.nye.progtech.businesslogic;
 
-import hu.nye.progtech.model.*;
+import hu.nye.progtech.model.Board;
+import hu.nye.progtech.model.Game;
+import hu.nye.progtech.model.GameStatus;
+import hu.nye.progtech.model.Mark;
+import hu.nye.progtech.model.Position;
 import hu.nye.progtech.util.BoardUtil;
 
 public class GameService {
@@ -22,15 +26,7 @@ public class GameService {
             return false;
         }
 
-        if (!hasAnyMark(board)) {
-            return false;
-        }
-
-        if (!BoardUtil.isAdjacentToExistingMark(position, board)) {
-            return false;
-        }
-
-        return true;
+        return hasAnyMark(board) && BoardUtil.isAdjacentToExistingMark(position, board);
     }
 
     public GameStatus checkWinCondition(Game game) {
@@ -68,17 +64,14 @@ public class GameService {
 
     private boolean checkWin(Board board, Mark mark, Position lastMove) {
 
-        if (lastMove == null) {
-            return false;
-        }
-        return checkFromPosition(lastMove.getRow(), lastMove.getCol(), board, mark);
+        return lastMove != null && checkFromPosition(lastMove.getRow(), lastMove.getCol(), board, mark);
     }
 
     private boolean checkFromPosition(int row, int col, Board board, Mark mark) {
 
         int[][] directions = {{0, 1}, {1, 0}, {1, 1}, {1, -1}};
 
-        for (int[] dir :directions) {
+        for (int[] dir : directions) {
             if (checkDirection(row, col, dir[0], dir[1], board, mark)) {
                 return true;
             }
@@ -107,12 +100,10 @@ public class GameService {
         return count == 5;
     }
 
-
-
     private boolean hasEmptyCell(Board board) {
 
         for (int i = 0; i < board.getRows(); i++) {
-            for (int j = 0; j <board.getCols(); j++) {
+            for (int j = 0; j < board.getCols(); j++) {
                 if (board.getMark(new Position(i, j)) == Mark.EMPTY) {
                     return true;
                 }

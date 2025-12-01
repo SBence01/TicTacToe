@@ -1,9 +1,10 @@
 package hu.nye.progtech.command;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 import hu.nye.progtech.model.Position;
 import hu.nye.progtech.util.PositionFormatter;
-
-import java.util.Scanner;
 
 public class ConsoleUI {
 
@@ -53,7 +54,7 @@ public class ConsoleUI {
     public Position getPlayerMove() {
         while (true) {
             System.out.print("Enter your move (e.g., e5): ");
-            String input = scanner.nextLine().trim().toLowerCase();
+            String input = scanner.nextLine().trim().toLowerCase(Locale.ROOT);
 
             Position position = PositionFormatter.parse(input);
             if (position != null) {
@@ -75,7 +76,7 @@ public class ConsoleUI {
 
     public int getMenuChoice() {
 
-        while(true) {
+        while (true) {
             System.out.print("Choose an option: ");
             try {
                 int choice = Integer.parseInt(scanner.nextLine().trim());

@@ -1,5 +1,7 @@
 package hu.nye.progtech.util;
 
+import java.util.Locale;
+
 import hu.nye.progtech.model.Position;
 
 public class PositionFormatter {
@@ -21,7 +23,7 @@ public class PositionFormatter {
             return null;
         }
 
-        input = input.trim().toLowerCase();
+        input = input.trim().toLowerCase(Locale.ROOT);
 
         char colChar = input.charAt(0);
         String rowString = input.substring(1);

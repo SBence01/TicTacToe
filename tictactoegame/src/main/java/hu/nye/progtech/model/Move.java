@@ -22,8 +22,12 @@ public final class Move {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return  true;
-        if (!(o instanceof Move otherMove)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Move otherMove)) {
+            return false;
+        }
         return Objects.equals(position, otherMove.position) && mark == otherMove.mark;
     }
 

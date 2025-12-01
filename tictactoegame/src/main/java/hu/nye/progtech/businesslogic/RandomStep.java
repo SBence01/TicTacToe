@@ -1,12 +1,12 @@
 package hu.nye.progtech.businesslogic;
 
-import hu.nye.progtech.model.Board;
-import hu.nye.progtech.model.Position;
-import hu.nye.progtech.util.BoardUtil;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import hu.nye.progtech.model.Board;
+import hu.nye.progtech.model.Position;
+import hu.nye.progtech.util.BoardUtil;
 
 public class RandomStep {
 
