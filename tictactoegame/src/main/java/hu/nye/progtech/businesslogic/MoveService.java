@@ -10,7 +10,6 @@ public class MoveService {
 
         Board board = game.getBoard();
         board.setMark(move.getPosition(), move.getMark());
-        game.setLastMove(move.getPosition());
     }
 
     public void switchPlayer(Game game) {

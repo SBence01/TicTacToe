@@ -19,7 +19,7 @@ public class ConsoleDisplay {
     }
 
     private void printColumnHeaders(int cols) {
-        System.out.print(" ");
+        System.out.print("   ");
         for (int i = 0; i < cols; i++) {
             System.out.print(" " + (char) ('a' + i) + " ");
         }
@@ -28,7 +28,7 @@ public class ConsoleDisplay {
 
     private void printSeparator(int cols) {
 
-        System.out.print(" +");
+        System.out.print("  +");
         for (int i = 0; i < cols; i++) {
             System.out.print("---");
         }

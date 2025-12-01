@@ -69,9 +69,10 @@ public class GameEngine {
         game = new Game(player, computer, board);
 
         gameService.placeFirstMove(board, Mark.X);
-        game.setLastMove(new Position(rows / 2, cols / 2));
 
         consoleDisplay.displayBoard(board);
+
+        moveService.switchPlayer(game);
 
         gameLoop();
     }
@@ -102,9 +103,9 @@ public class GameEngine {
                 consoleDisplay.displayDraw();
                 break;
             }
-        }
 
-        moveService.switchPlayer(game);
+            moveService.switchPlayer(game);
+        }
     }
 
     private void executePlayerMove() {

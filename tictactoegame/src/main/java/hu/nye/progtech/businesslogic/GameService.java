@@ -31,13 +31,12 @@ public class GameService {
 
     public GameStatus checkWinCondition(Game game) {
         Board board = game.getBoard();
-        Position lastMove = game.getLastMove();
 
-        if (checkWin(board, Mark.X, lastMove)) {
+        if (checkWin(board, Mark.X)) {
             return GameStatus.PLAYER_WON;
         }
 
-        if (checkWin(board, Mark.O, lastMove)) {
+        if (checkWin(board, Mark.O)) {
             return GameStatus.COMPUTER_WON;
         }
 
@@ -62,9 +61,16 @@ public class GameService {
 
 
 
-    private boolean checkWin(Board board, Mark mark, Position lastMove) {
+    private boolean checkWin(Board board, Mark mark) {
 
-        return lastMove != null && checkFromPosition(lastMove.getRow(), lastMove.getCol(), board, mark);
+        for (int i = 0; i < board.getRows(); i++) {
+            for (int j = 0; j < board.getCols(); j++) {
+                if (checkFromPosition(i, j, board, mark)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private boolean checkFromPosition(int row, int col, Board board, Mark mark) {
