@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Fixing errors for successful execution of checkstyle and pmd ruleset; stage 2">
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/DatabaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/HighScoreRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/GameService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/GameService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/MoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/businesslogic/MoveService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/model/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,26 +61,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.tictactoegame [clean,install].executor": "Run",
-    "Maven.tictactoegame [clean:install].executor": "Run",
-    "Maven.tictactoegame [clean].executor": "Run",
-    "Maven.tictactoegame [install].executor": "Run",
-    "Maven.tictactoegame [validate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Home/IdeaProjects/TicTacToe",
-    "onboarding.tips.debug.path": "C:/Users/Home/IdeaProjects/TicTacToe/tictactoegame/src/main/java/hu/nye/progtech/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tictactoegame [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tictactoegame [clean:install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tictactoegame [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tictactoegame [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.tictactoegame [validate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Home/IdeaProjects/TicTacToe&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Home/IdeaProjects/TicTacToe/tictactoegame/src/main/java/hu/nye/progtech/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Home\IdeaProjects\TicTacToe" />

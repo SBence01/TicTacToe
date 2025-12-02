@@ -4,6 +4,7 @@ import hu.nye.progtech.businesslogic.GameService;
 import hu.nye.progtech.businesslogic.MoveService;
 import hu.nye.progtech.businesslogic.RandomStep;
 import hu.nye.progtech.command.ConsoleUI;
+import hu.nye.progtech.db.HighScoreRepository;
 import hu.nye.progtech.display.ConsoleDisplay;
 import hu.nye.progtech.model.Board;
 import hu.nye.progtech.model.Game;
@@ -21,6 +22,7 @@ public class GameEngine {
     private final RandomStep randomStep;
     private final ConsoleUI consoleUI;
     private final ConsoleDisplay consoleDisplay;
+    private final HighScoreRepository highScoreRepository;
 
     private Game game;
 
@@ -29,12 +31,14 @@ public class GameEngine {
             MoveService moveService,
             RandomStep randomStep,
             ConsoleUI consoleUI,
-            ConsoleDisplay consoleDisplay) {
+            ConsoleDisplay consoleDisplay,
+            HighScoreRepository highScoreRepository) {
         this.gameService = gameService;
         this.moveService = moveService;
         this.randomStep = randomStep;
         this.consoleUI = consoleUI;
         this.consoleDisplay = consoleDisplay;
+        this.highScoreRepository = highScoreRepository;
     }
 
     public void run() {
@@ -95,9 +99,11 @@ public class GameEngine {
 
             if (status == GameStatus.PLAYER_WON) {
                 consoleDisplay.displayWinner(game.getPlayer().getName());
+                highScoreRepository.saveWin(game.getPlayer().getName());
                 break;
             } else if (status == GameStatus.COMPUTER_WON) {
                 consoleDisplay.displayWinner(game.getComputer().getName());
+                highScoreRepository.saveWin(game.getPlayer().getName());
                 break;
             } else if (status == GameStatus.DRAW) {
                 consoleDisplay.displayDraw();

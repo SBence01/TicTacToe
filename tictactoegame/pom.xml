@@ -20,6 +20,12 @@
     </properties>
 
     <dependencies>
+        <!-- H2 database -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.4.240</version>
+        </dependency>
         <!-- Logging via SLF4J API -->
         <dependency>
             <groupId>org.slf4j</groupId>
