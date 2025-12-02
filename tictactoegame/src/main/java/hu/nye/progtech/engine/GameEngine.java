@@ -1,5 +1,7 @@
 package hu.nye.progtech.engine;
 
+import java.util.List;
+
 import hu.nye.progtech.businesslogic.GameService;
 import hu.nye.progtech.businesslogic.MoveService;
 import hu.nye.progtech.businesslogic.RandomStep;
@@ -53,6 +55,9 @@ public class GameEngine {
                 loadGame();
                 break;
             case 3:
+                showHighScores();
+                break;
+            case 4:
                 exit();
                 break;
             default:
@@ -143,6 +148,13 @@ public class GameEngine {
 
     private void loadGame() {
         consoleDisplay.displayMessage("");
+        run();
+    }
+
+    private void showHighScores() {
+
+        List<HighScoreRepository.PlayerScore> scores = highScoreRepository.getHighScores();
+        consoleDisplay.displayHighScores(scores);
         run();
     }
 

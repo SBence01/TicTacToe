@@ -70,7 +70,8 @@ public class ConsoleUI {
         System.out.println("=== TICTACTOE GAME ===");
         System.out.println("1. New Game");
         System.out.println("2. Load Game");
-        System.out.println("3. Exit");
+        System.out.println("3. Show High Scores");
+        System.out.println("4. Exit");
         System.out.println();
     }
 
@@ -80,10 +81,10 @@ public class ConsoleUI {
             System.out.print("Choose an option: ");
             try {
                 int choice = Integer.parseInt(scanner.nextLine().trim());
-                if (choice >= 1 && choice <= 3) {
+                if (choice >= 1 && choice <= 4) {
                     return choice;
                 }
-                System.out.println("Please enter 1, 2, or 3.");
+                System.out.println("Please enter 1, 2, 3 or 4.");
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input! Please enter a number.");
             }

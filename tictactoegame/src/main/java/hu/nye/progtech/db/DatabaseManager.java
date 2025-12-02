@@ -30,7 +30,7 @@ public class DatabaseManager {
     private void startWebServer() {
 
         try {
-            webServer = Server.createWebServer("-web","-webPort","8082").start();
+            webServer = Server.createWebServer("-web", "-webPort", "8082").start();
             logger.info("H2 Console started at http://localhost:8082");
         } catch (SQLException e) {
             logger.info("Could not start H2 Console", e);
@@ -66,6 +66,11 @@ public class DatabaseManager {
             } catch (SQLException e) {
                 logger.error("Failed to close database connection", e);
             }
+        }
+
+        if (webServer != null) {
+            webServer.stop();
+            logger.info("H2 Console stopped");
         }
     }
 }

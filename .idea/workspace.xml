@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Fixing errors for successful execution of checkstyle and pmd ruleset; stage 2">
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/HighScoreRepository.java" afterDir="false" />
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Add H2 file based database to the project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764626532494</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="- Add H2 file based database to the project">
+      <option name="closed" value="true" />
+      <created>1764711797627</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764711797627</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +216,7 @@
     <MESSAGE value="- Implement ConsoleDisplay to draw the board to the console&#10;- Implement ConsoleUI for user interactions&#10;- Implement GameEngine for application processes&#10;- Outsource PositionFormatter to utils package&#10;- Small modification on Board model" />
     <MESSAGE value="- Fixing errors for successful execution of checkstyle and pmd ruleset&#10;- Implement Application.java" />
     <MESSAGE value="- Fixing errors for successful execution of checkstyle and pmd ruleset; stage 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixing errors for successful execution of checkstyle and pmd ruleset; stage 2" />
+    <MESSAGE value="- Add H2 file based database to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add H2 file based database to the project" />
   </component>
 </project>

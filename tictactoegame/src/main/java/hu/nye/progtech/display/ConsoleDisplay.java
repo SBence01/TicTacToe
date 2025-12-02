@@ -1,5 +1,8 @@
 package hu.nye.progtech.display;
 
+import java.util.List;
+
+import hu.nye.progtech.db.HighScoreRepository;
 import hu.nye.progtech.model.Board;
 import hu.nye.progtech.model.Mark;
 import hu.nye.progtech.model.Position;
@@ -60,5 +63,26 @@ public class ConsoleDisplay {
     public void displayDraw() {
 
         System.out.println("DRAW!");
+    }
+
+    public void displayHighScores(List<HighScoreRepository.PlayerScore> scores) {
+
+        System.out.println();
+        System.out.println("=============");
+        System.out.println(" HIGH SCORES");
+        System.out.println("=============");
+
+        if (scores.isEmpty()) {
+            System.out.println("No scores yet. Play a game.");
+        } else {
+            System.out.printf("%-20s %s%n", "Player", "Wins");
+            System.out.println("-------------");
+
+            for (HighScoreRepository.PlayerScore score : scores) {
+                System.out.printf("%-20s %d%n", score.getPlayerName(), score.getWins());
+            }
+        }
+
+        System.out.println();
     }
 }
