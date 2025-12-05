@@ -10,6 +10,8 @@ import hu.nye.progtech.db.DatabaseManager;
 import hu.nye.progtech.db.HighScoreRepository;
 import hu.nye.progtech.display.ConsoleDisplay;
 import hu.nye.progtech.engine.GameEngine;
+import hu.nye.progtech.filehandler.FileGameLoader;
+import hu.nye.progtech.filehandler.FileGameWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,9 +36,18 @@ public class Application {
         RandomStep randomStep = new RandomStep();
         ConsoleUI consoleUI = new ConsoleUI();
         ConsoleDisplay consoleDisplay = new ConsoleDisplay();
+        FileGameLoader fileGameLoader = new FileGameLoader();
+        FileGameWriter fileGameWriter = new FileGameWriter();
 
         GameEngine gameEngine = new GameEngine(
-                gameService, moveService, randomStep, consoleUI, consoleDisplay, highScoreRepository
+                gameService,
+                moveService,
+                randomStep,
+                consoleUI,
+                consoleDisplay,
+                highScoreRepository,
+                fileGameLoader,
+                fileGameWriter
         );
 
         gameEngine.run();

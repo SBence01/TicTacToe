@@ -4,7 +4,7 @@ import java.util.Locale;
 
 import hu.nye.progtech.model.Position;
 
-public class PositionFormatter {
+public class PositionUtil {
 
     /*
      Converts a position to a string format

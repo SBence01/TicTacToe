@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import hu.nye.progtech.model.Position;
-import hu.nye.progtech.util.PositionFormatter;
+import hu.nye.progtech.util.PositionUtil;
 
 public class ConsoleUI {
 
@@ -51,12 +51,32 @@ public class ConsoleUI {
         }
     }
 
+    public String getPlayerAction() {
+
+        while (true) {
+            System.out.println();
+            System.out.println("What do you want to do?");
+            System.out.println("1. Make a move");
+            System.out.println("2. Save and exit");
+            System.out.println("3. Exit without saving");
+            System.out.print("Choose: ");
+
+            String choice = scanner.nextLine().trim();
+
+            if ("1".equals(choice) || "2".equals(choice) || "3".equals(choice)) {
+                return choice;
+            }
+
+            System.out.println("Invalid choice! Please enter 1, 2 or 3.");
+        }
+    }
+
     public Position getPlayerMove() {
         while (true) {
             System.out.print("Enter your move (e.g., e5): ");
             String input = scanner.nextLine().trim().toLowerCase(Locale.ROOT);
 
-            Position position = PositionFormatter.parse(input);
+            Position position = PositionUtil.parse(input);
             if (position != null) {
                 return position;
             }

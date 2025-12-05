@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Add H2 file based database to the project">
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues">
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/filehandler/FileGameLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/filehandler/FileGameWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/db/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/display/ConsoleDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764711797627</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues">
+      <option name="closed" value="true" />
+      <created>1764712811730</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1764712811730</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -217,6 +227,7 @@
     <MESSAGE value="- Fixing errors for successful execution of checkstyle and pmd ruleset&#10;- Implement Application.java" />
     <MESSAGE value="- Fixing errors for successful execution of checkstyle and pmd ruleset; stage 2" />
     <MESSAGE value="- Add H2 file based database to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add H2 file based database to the project" />
+    <MESSAGE value="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues" />
   </component>
 </project>

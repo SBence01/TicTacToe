@@ -8,6 +8,8 @@ import hu.nye.progtech.businesslogic.RandomStep;
 import hu.nye.progtech.command.ConsoleUI;
 import hu.nye.progtech.db.HighScoreRepository;
 import hu.nye.progtech.display.ConsoleDisplay;
+import hu.nye.progtech.filehandler.FileGameLoader;
+import hu.nye.progtech.filehandler.FileGameWriter;
 import hu.nye.progtech.model.Board;
 import hu.nye.progtech.model.Game;
 import hu.nye.progtech.model.GameStatus;
@@ -15,7 +17,7 @@ import hu.nye.progtech.model.Mark;
 import hu.nye.progtech.model.Move;
 import hu.nye.progtech.model.Player;
 import hu.nye.progtech.model.Position;
-import hu.nye.progtech.util.PositionFormatter;
+import hu.nye.progtech.util.PositionUtil;
 
 public class GameEngine {
 
@@ -25,6 +27,10 @@ public class GameEngine {
     private final ConsoleUI consoleUI;
     private final ConsoleDisplay consoleDisplay;
     private final HighScoreRepository highScoreRepository;
+    private final FileGameLoader fileGameLoader;
+    private final FileGameWriter fileGameWriter;
+
+    private static final String SAVE_FILE = "saved_game.txt";
 
     private Game game;
 
@@ -34,13 +40,17 @@ public class GameEngine {
             RandomStep randomStep,
             ConsoleUI consoleUI,
             ConsoleDisplay consoleDisplay,
-            HighScoreRepository highScoreRepository) {
+            HighScoreRepository highScoreRepository,
+            FileGameLoader fileGameLoader,
+            FileGameWriter fileGameWriter) {
         this.gameService = gameService;
         this.moveService = moveService;
         this.randomStep = randomStep;
         this.consoleUI = consoleUI;
         this.consoleDisplay = consoleDisplay;
         this.highScoreRepository = highScoreRepository;
+        this.fileGameLoader = fileGameLoader;
+        this.fileGameWriter = fileGameWriter;
     }
 
     public void run() {
@@ -86,6 +96,27 @@ public class GameEngine {
         gameLoop();
     }
 
+    private void loadGame() {
+
+        Board board = fileGameLoader.loadBoard(SAVE_FILE);
+
+        if (board == null) {
+            consoleDisplay.displayMessage("Failed to load game. Starting new game instead.");
+            startNewGame();
+            return;
+        }
+
+        String playerName = consoleUI.getPlayerName();
+        Player player = new Player(playerName, Mark.X);
+        Player computer = new Player("Computer", Mark.O);
+        game = new Game(player, computer, board);
+
+        consoleDisplay.displayMessage("Game loaded successfully!");
+        consoleDisplay.displayBoard(board);
+
+        gameLoop();
+    }
+
     private void gameLoop() {
 
         while (game.getStatus() == GameStatus.IN_PROGRESS) {
@@ -117,20 +148,46 @@ public class GameEngine {
 
             moveService.switchPlayer(game);
         }
+
+        run();
     }
 
     private void executePlayerMove() {
-        while (true) {
-            Position position = consoleUI.getPlayerMove();
+        String action = consoleUI.getPlayerAction();
 
-            if (gameService.isValidMove(position, game)) {
-                Move move = new Move(position, Mark.X);
-                moveService.applyMove(game, move);
+        switch (action) {
+            case "1":
+                while (true) {
+                    Position position = consoleUI.getPlayerMove();
+
+                    if (gameService.isValidMove(position, game)) {
+                        Move move = new Move(position, Mark.X);
+                        moveService.applyMove(game, move);
+                        break;
+                    } else {
+                        consoleDisplay.displayMessage("Invalid move! Try again.");
+                    }
+                }
                 break;
-            } else {
-                consoleDisplay.displayMessage("Invalid move! Try again.");
-            }
+
+            case "2":
+                fileGameWriter.saveBoard(game.getBoard(), SAVE_FILE);
+                consoleDisplay.displayMessage("Game saved to " + SAVE_FILE);
+                consoleDisplay.displayMessage("Thanks for playing!");
+                consoleUI.close();
+                System.exit(0);
+                break;
+
+            case "3":
+                consoleDisplay.displayMessage("Thanks for playing!");
+                consoleUI.close();
+                System.exit(0);
+                break;
+
+            default:
+                break;
         }
+
     }
 
     private void executeComputerMove() {
@@ -142,13 +199,8 @@ public class GameEngine {
         if (position != null) {
             Move move = new Move(position, Mark.O);
             moveService.applyMove(game, move);
-            consoleDisplay.displayMessage("Computer moved: " + PositionFormatter.format(position));
+            consoleDisplay.displayMessage("Computer moved: " + PositionUtil.format(position));
         }
-    }
-
-    private void loadGame() {
-        consoleDisplay.displayMessage("");
-        run();
     }
 
     private void showHighScores() {
