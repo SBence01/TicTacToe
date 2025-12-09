@@ -4,19 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues">
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/filehandler/FileGameLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/filehandler/FileGameWriter.java" afterDir="false" />
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Implement the file handler logics">
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/businesslogic/GameServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/businesslogic/MoveServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/businesslogic/RandomStepTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/util/BoardUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/util/PositionUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/command/ConsoleUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/engine/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/main/java/hu/nye/progtech/util/PositionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -62,26 +65,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tictactoegame [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tictactoegame [clean:install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tictactoegame [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tictactoegame [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.tictactoegame [validate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Home/IdeaProjects/TicTacToe&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Home/IdeaProjects/TicTacToe/tictactoegame/src/main/java/hu/nye/progtech/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.BoardUtilTest.executor": "Coverage",
+    "JUnit.GameServiceTest.executor": "Coverage",
+    "JUnit.MoveServiceTest.executor": "Coverage",
+    "JUnit.PositionUtilTest.executor": "Coverage",
+    "JUnit.RandomStepTest.executor": "Coverage",
+    "JUnit.progtech in tictactoegame.executor": "Run",
+    "JUnit.util in tictactoegame.executor": "Coverage",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.tictactoegame [clean,install].executor": "Run",
+    "Maven.tictactoegame [clean:install].executor": "Run",
+    "Maven.tictactoegame [clean].executor": "Run",
+    "Maven.tictactoegame [install].executor": "Run",
+    "Maven.tictactoegame [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Home/IdeaProjects/TicTacToe",
+    "onboarding.tips.debug.path": "C:/Users/Home/IdeaProjects/TicTacToe/tictactoegame/src/main/java/hu/nye/progtech/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Home\IdeaProjects\TicTacToe" />
@@ -93,16 +103,71 @@
       <command value="mvn clean install" />
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hu.nye.progtech.Main" />
+  <component name="RunManager" selected="JUnit.progtech in tictactoegame">
+    <configuration name="GameServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tictactoegame" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hu.nye.progtech.*" />
+          <option name="PATTERN" value="hu.nye.progtech.businesslogic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="hu.nye.progtech.businesslogic" />
+      <option name="MAIN_CLASS_NAME" value="hu.nye.progtech.businesslogic.GameServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoveServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoegame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.nye.progtech.businesslogic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.nye.progtech.businesslogic" />
+      <option name="MAIN_CLASS_NAME" value="hu.nye.progtech.businesslogic.MoveServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PositionUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoegame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.nye.progtech.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.nye.progtech.util" />
+      <option name="MAIN_CLASS_NAME" value="hu.nye.progtech.util.PositionUtilTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RandomStepTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoegame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.nye.progtech.businesslogic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hu.nye.progtech.businesslogic" />
+      <option name="MAIN_CLASS_NAME" value="hu.nye.progtech.businesslogic.RandomStepTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="progtech in tictactoegame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tictactoegame" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -120,7 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.progtech in tictactoegame" />
+        <item itemvalue="JUnit.RandomStepTest" />
+        <item itemvalue="JUnit.MoveServiceTest" />
+        <item itemvalue="JUnit.GameServiceTest" />
+        <item itemvalue="JUnit.PositionUtilTest" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764712811730</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Implement the file handler logics">
+      <option name="closed" value="true" />
+      <created>1764924484416</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1764924484416</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,6 +305,25 @@
     <MESSAGE value="- Fixing errors for successful execution of checkstyle and pmd ruleset; stage 2" />
     <MESSAGE value="- Add H2 file based database to the project" />
     <MESSAGE value="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues" />
+    <MESSAGE value="- Implement the file handler logics" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implement the file handler logics" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TicTacToe$BoardUtilTest.ic" NAME="BoardUtilTest Coverage Results" MODIFIED="1765147814047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>hu.nye.progtech.util.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TicTacToe$RandomStepTest.ic" NAME="RandomStepTest Coverage Results" MODIFIED="1765299632573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>hu.nye.progtech.businesslogic.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TicTacToe$GameServiceTest.ic" NAME="GameServiceTest Coverage Results" MODIFIED="1765297722326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>hu.nye.progtech.businesslogic.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TicTacToe$PositionUtilTest.ic" NAME="PositionUtilTest Coverage Results" MODIFIED="1765148215084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>hu.nye.progtech.util.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TicTacToe$util_in_tictactoegame.ic" NAME="util in tictactoegame Coverage Results" MODIFIED="1765147838294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/TicTacToe$MoveServiceTest.ic" NAME="MoveServiceTest Coverage Results" MODIFIED="1765298047073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>hu.nye.progtech.businesslogic.*</FILTER>
+    </SUITE>
   </component>
 </project>

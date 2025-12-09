@@ -114,6 +114,13 @@
                 <configuration>
                     <excludes>
                         <exclude>**/model/*</exclude>
+                        <exclude>**/command/*</exclude>
+                        <exclude>**/db/*</exclude>
+                        <exclude>**/display/*</exclude>
+                        <exclude>**/filehandler/*</exclude>
+                        <exclude>**/engine/*</exclude>
+                        <exclude>**/Main.class</exclude>
+                        <exclude>**/Application.class</exclude>
                     </excludes>
                 </configuration>
                 <executions>
@@ -142,7 +149,7 @@
                                         <limit>
                                             <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>0.0</minimum>
+                                            <minimum>0.8</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
