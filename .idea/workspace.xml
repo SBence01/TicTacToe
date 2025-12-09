@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Create unit tests for businesslogic and util">
+    <list default="true" id="0e148cff-e481-49b6-8515-fbc289158bcd" name="Changes" comment="- Create unit tests for businesslogic and util 2&#10;- Add documents to branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/util/PositionUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/src/test/java/hu/nye/progtech/util/PositionUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tictactoegame/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tictactoegame/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765300171669</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- Create unit tests for businesslogic and util 2&#10;- Add documents to branch">
+      <option name="closed" value="true" />
+      <created>1765300733348</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765300733348</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,7 +318,8 @@
     <MESSAGE value="- Add the &quot;Show High Scores&quot; option to the Main Menu&#10;- fix some pmd and checkstyle issues" />
     <MESSAGE value="- Implement the file handler logics" />
     <MESSAGE value="- Create unit tests for businesslogic and util" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Create unit tests for businesslogic and util" />
+    <MESSAGE value="- Create unit tests for businesslogic and util 2&#10;- Add documents to branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Create unit tests for businesslogic and util 2&#10;- Add documents to branch" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TicTacToe$BoardUtilTest.ic" NAME="BoardUtilTest Coverage Results" MODIFIED="1765147814047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
